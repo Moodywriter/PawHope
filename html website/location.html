@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawHope | Where to Find Us</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7F6F2;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header.site-header{
+      background:#B20009;
+      color:white;
+      padding:16px 0;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .nav a{
+      color:white;
+      margin-left:18px;
+      font-weight:bold;
+      font-size:16px;
+      text-decoration:none;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    .top-bar {
+      padding: 20px 0 0 0;
+    }
+
+    .back-button {
+      display: inline-block;
+      background: #709B0E;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .back-button:hover {
+      background: #5d850c;
+    }
+
+    .hero {
+      padding: 60px 0 30px 0;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 52px;
+      color: #B20009;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 34px;
+      color: #B20009;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .section {
+      padding: 40px 0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .event-details p {
+      margin-bottom: 12px;
+    }
+
+    .highlight {
+      color: #709B0E;
+      font-weight: bold;
+    }
+
+    .map-box {
+      background: white;
+      padding: 18px;
+      border-radius: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 420px;
+      border: 0;
+      border-radius: 18px;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .cta {
+      background: #B20009;
+      color: white;
+      text-align: center;
+      padding: 70px 0;
+      margin-top: 50px;
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">PawHope</div>
+      <nav>
+        <a href="html.html">Home</a>
+        <a href="sdg.html">UN Goal</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container top-bar">
+    <a href="html.html" class="back-button">← Back to Home</a>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge">Meet PawHope in person</div>
+      <h1>Where to Find Us</h1>
+      <p>
+        PawHope will be presenting at the Entrepreneurship Fair at Punta Cana International School on March 20.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container info-grid">
+      <div class="card event-details">
+        <h2>Event Details</h2>
+        <p><strong>Event:</strong> Entrepreneurship Fair</p>
+        <p><strong>Location:</strong> Punta Cana International School</p>
+        <p><strong>Date:</strong> <span class="highlight">March 20</span></p>
+        <p>
+          Visit our stand to learn how PawHope’s automatic feeding dispensers help stray dogs and cats, and how our pet treats and collars help fund that mission.
+        </p>
+        <p class="note">
+          This page helps visitors quickly know where the business will be presented and why they should stop by.
+        </p>
+      </div>
+
+      <div class="map-box">
+        <iframe
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps?q=Punta+Cana+International+School&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Come Visit PawHope</h2>
+      <p>
+        Discover our project, support our mission, and see how small purchases can create real impact for stray animals.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>
