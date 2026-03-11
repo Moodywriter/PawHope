@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawHope</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F7F6F2;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header.site-header{
+      background:#B20009;
+      color:white;
+      padding:16px 0;
+      margin-bottom:0;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .nav a{
+      color:white;
+      margin-left:18px;
+      font-weight:bold;
+      font-size:16px;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom right, #F7F6F2, #F7F6F2, rgba(112, 155, 14, 0.2));
+      padding: 80px 0;
+    }
+
+    .hero-content,
+    .mission-content,
+    .impact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 56px;
+      color: #B20009;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 40px;
+      color: #B20009;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background-color: #B20009;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 16px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-secondary {
+      border: 2px solid #B20009;
+      color: #B20009;
+      padding: 12px 24px;
+      border-radius: 16px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .image-box,
+    .impact-box {
+      background: white;
+      padding: 24px;
+      border-radius: 32px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .image-box img,
+    .impact-box img {
+      width: 100%;
+      border-radius: 24px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .image-box img {
+      height: 420px;
+    }
+
+    .impact-box img {
+      height: 320px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .values {
+      display: grid;
+      gap: 16px;
+    }
+
+    .value-card {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-left: 4px solid #709B0E;
+      font-weight: 600;
+    }
+
+    .products-section {
+      background: rgba(112, 155, 14, 0.1);
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: white;
+      padding: 28px;
+      border-radius: 32px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .product-icon {
+      width: 48px;
+      height: 48px;
+      background: #709B0E;
+      border-radius: 16px;
+      margin-bottom: 16px;
+    }
+
+    .impact-wrapper {
+      background: white;
+      border-radius: 32px;
+      padding: 40px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .cta {
+      background: #B20009;
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .cta h2 {
+      color: white;
+    }
+
+    .cta-button {
+      margin-top: 30px;
+      background: white;
+      color: #B20009;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content,
+      .mission-content,
+      .impact-content,
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">PawHope</div>
+      <nav>
+        <a href="html.html">Home</a>
+        <a href="sdg.html">UN Goal</a>
+        <a href="location.html">Location</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div>
+        <div class="badge">Helping every stray find hope</div>
+        <h1>PawHope</h1>
+        <p>
+          PawHope builds automatic feeding dispensers for stray dogs and cats in areas where food is scarce.
+          By purchasing our pet products, customers help fund these life-saving feeding stations.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#mission" class="btn-primary">Our Mission</a>
+          <a href="#products" class="btn-secondary">Products</a>
+          <a href="sdg.html" class="btn-secondary">UN Goal</a>
+          <a href="contact.html" class="btn-secondary">Contact</a>
+        </div>
+      </div>
+
+      <div class="image-box">
+        <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d" alt="Stray dog">
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section id="mission" class="section">
+    <div class="container mission-content">
+      <div>
+        <h2>Our Mission</h2>
+        <p>
+          Many stray dogs and cats struggle to find food daily. PawHope addresses this problem by installing
+          automatic food dispensers in critical areas where stray populations are high.
+        </p>
+        <br>
+        <p>
+          Our business model funds these dispensers through the sale of pet products such as treats and collars.
+          35% of profits are reinvested directly into building and installing new feeding stations.
+        </p>
+        <div class="hero-buttons" style="margin-top:20px;">
+          <a href="location.html" class="btn-secondary">See Where to Find Us</a>
+        </div>
+      </div>
+
+      <div class="values">
+        <div class="value-card">Helping stray animals survive</div>
+        <div class="value-card">Community responsibility</div>
+        <div class="value-card">Sustainable animal support</div>
+        <div class="value-card">Turning purchases into impact</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Products That Create Impact</h2>
+        <p>Every purchase helps fund feeding stations for stray animals.</p>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-icon"></div>
+          <h3>Automatic Feeding Dispensers</h3>
+          <p>
+            Durable automatic food dispensers placed in critical areas to provide consistent food access for stray dogs and cats.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon"></div>
+          <h3>Pet Treats</h3>
+          <p>
+            Healthy treats for pets. 35% of profits help fund the creation and installation of PawHope feeding stations.
+          </p>
+        </div>
+
+        <div class="product-card">
+          <div class="product-icon"></div>
+          <h3>Pet Collars</h3>
+          <p>
+            Comfortable and safe collars for pets. Each purchase directly contributes to expanding PawHope feeding stations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section">
+    <div class="container impact-wrapper">
+      <div class="impact-content">
+        <div>
+          <h2>Real Impact</h2>
+          <p>
+            Each PawHope feeding dispenser provides consistent food access for stray animals that would otherwise struggle to survive.
+            With every product sold, we move closer to installing more feeding stations in communities that need them most.
+          </p>
+        </div>
+
+        <div class="impact-box">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b" alt="Dog outside">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Support PawHope</h2>
+      <p>
+        When you buy from PawHope, you are not only helping your pet—you are helping stray animals find food and hope.
+      </p>
+      <button class="cta-button">Join the Mission</button>
+    </div>
+  </section>
+
+</body>
+</html>
